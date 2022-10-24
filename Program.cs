@@ -47,8 +47,30 @@ int num =Convert.ToInt32(Console.ReadLine());
 
 FindThirdDigit (num);
 
-*/
 
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
+bool CheckDays (int dayNum)
+{
+    if (dayNum == 6 || dayNum == 7) return true;
+    return false;
+}
 
+Console.WriteLine("Input number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+bool result = CheckDays (number);
+if (result)
+{
+    Console.WriteLine($"The number {number} is a day off.");
+}
+else if (number < 1 || number > 7)
+{
+    Console.WriteLine("It's not a day of the week");
+}
+else
+{
+    Console.WriteLine($"The number {number} is not a day off.");
+}
+
+*/
